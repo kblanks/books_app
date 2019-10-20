@@ -1,0 +1,14 @@
+body{
+    margin: auto;
+    width: 50%;
+}
+
+div{
+    margin: 10px;
+}
+
+.debug {
+    background-color: #ffe6b3;
+    color: black;
+    overflow-wrap: break-word;
+}

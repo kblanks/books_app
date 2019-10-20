@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Books App</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div>
+        Test
+    </div>
+    <div>
+        <fieldset>
+            <form action="/" method="POST">
+                <input name="search" type="text" placeholder="Enter a search term" required>
+                <input type="submit">
+            </form>
+        </fieldset>
+    </div>
+    <div class="results-list">
+        <ul>
+            <% for (var i=0; i<results.length; i++){ %>
+            <li>
+                <%= results[i] %>
+            </li>
+            <% } %>
+        </ul>
+    </div>
+    <div class="debug">
+        <% if(error !== null){ %>
+            <i class="fa fa-exclamation-circle"></i><%= error %>
+        <%}
+        else{ %>
+            <i class="fa fa-info-circle"></i>All good!
+        <%}%>
+    </div>
+    <div class="debug">
+        <% if(searchVal !== null){ %>
+            <i class="fa fa-info-circle"></i>You searched for: <%= searchVal %>
+        <%}%>
+    </div>
+</body>
+
+</html>
